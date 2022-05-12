@@ -6,14 +6,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
-import { MyFilterValue, MyFilterValue1 } from './myfilter';
+import {  MyFilterValue, MyFilterValue1 } from './myfilter';
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     MyFilterValue,
-    MyFilterValue1
+    MyFilterValue1,
+    TaskComponent
   ],
   imports: [
     BrowserModule,

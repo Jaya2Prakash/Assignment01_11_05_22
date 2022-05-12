@@ -11,20 +11,22 @@ export class MyFilterValue implements PipeTransform{
         let temp
         if(!filtervalue)
             return value
-        if(value && value.length){
+        if(value && value.length)
+        {
             value.forEach((v:any)=>{
                 temp = v['data'].toUpperCase();
                 filtervalue = filtervalue.toUpperCase();
                 if(temp.includes(filtervalue))
                     results.push(v);
             })
-            return results;
+            if(results.length==0)
+                return value
+            else
+                return results;
         }
+       
     }
 }
-
-
-
 
 @Pipe({
     name:'myfiltervalue1'
