@@ -30,6 +30,9 @@ export class TaskComponent implements OnInit {
 
   fib(){
     this.arr=[]
+    this.f1=-1
+    this.f2=1
+    this.f3=0
       for(let i=0;i<this.val;i++){
         this.f3=this.f1+this.f2
         this.arr.push(this.f3)

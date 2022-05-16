@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstname": "Jaya",
+      "lastname": "Prakash"
+    },
+    {
+      "id": "2",
+      "firstname": "siva",
+      "lastname": "kumar"
+    },
+    {
+      "id": "3",
+      "firstname": "mahima",
+      "lastname": "m"
+    },
+    {
+      "id": "4",
+      "firstname": "Arthi",
+      "lastname": "v"
+    }
+  ]
+}
