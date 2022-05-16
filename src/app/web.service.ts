@@ -21,11 +21,11 @@ export class WebService {
     return this.http.delete(this.url1+e)
   }
 
-  updateEmployee(emp:any){
+  update(emp:any){
     return this.http.put(this.url1+emp.id,emp)
   }
 
-  addnewEmployee(emp:any){
+  addnew(emp:any){
     return this.http.post(this.url1,emp)
   }
 }

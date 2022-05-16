@@ -30,44 +30,37 @@ export class Task1Component implements OnInit {
   edit(e:any){
     this.showedit= true
     this.emptoadd = e
-  }
-
-  addnew(){
-    this.showedit1= true
-    this.emptoadd = ""
+    this.showedit1= false
   }
 
   update(){
-    this.api.updateEmployee(this.emptoadd).subscribe((r:any)=>{
+    this.api.update(this.emptoadd).subscribe((r:any)=>{
       this.getdata();
       alert("Update Successfully")
       this.showedit= false
     });
   }
 
-  onDelete(e:any){
-    this.api.delUser(e).subscribe((r:any)=>{
-      this.getdata();
-      
-    })
+  addnew(){
+    this.showedit1= true
+    this.emptoadd = ""
+    this.showedit= false
   }
 
   add(){
     this.showedit1= true
-    this.api.addnewEmployee(this.emptoadd).subscribe((r:any)=>{
+    this.api.addnew(this.emptoadd).subscribe((r:any)=>{
        this.getdata();
        this.showedit1= false
       alert("Added Successfully")
   });
  }
 
- displayStyle = "none";
-  
-  openPopup() {
-    this.displayStyle = "block";
-  }
-  closePopup() {
-    this.displayStyle = "none";
-  }
+ onDelete(e:any){
+  this.api.delUser(e).subscribe((r:any)=>{
+    this.getdata();
+    
+  })
+}
 
 }
