@@ -10,7 +10,7 @@ export class Task1Component implements OnInit {
 
   users : any
 
-  emptoadd:any = {id:"",firstname:"",lastname:""} // empty object
+  emptoadd:any = {id:"",productname:"",quantity:"",price:""}
 
   showedit : boolean = false
   showedit1 : boolean = false
@@ -43,16 +43,16 @@ export class Task1Component implements OnInit {
 
   addnew(){
     this.showedit1= true
-    this.emptoadd = ""
+    this.emptoadd = {}
     this.showedit= false
   }
 
   add(){
-    this.showedit1= true
-    this.api.addnew(this.emptoadd).subscribe((r:any)=>{
+    this.api.addnewdata(this.emptoadd).subscribe((r:any)=>{
        this.getdata();
-       this.showedit1= false
+       
       alert("Added Successfully")
+      this.showedit1= false
   });
  }
 

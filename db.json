@@ -2,23 +2,33 @@
   "users": [
     {
       "id": "1",
-      "firstname": "Jaya",
-      "lastname": "Prakash"
+      "productname": "rice",
+      "quantity": "1kg",
+      "price": "125"
     },
     {
       "id": "2",
-      "firstname": "siva",
-      "lastname": "kumar"
+      "productname": "wheat",
+      "quantity": "1kg",
+      "price": "125"
     },
     {
       "id": "3",
-      "firstname": "mahima",
-      "lastname": "m"
+      "productname": "dhal",
+      "quantity": "1kg",
+      "price": "60"
     },
     {
       "id": "4",
-      "firstname": "Arthi",
-      "lastname": "v"
+      "productname": "hello",
+      "quantity": "1kg",
+      "price": "60"
+    },
+    {
+      "id": "5",
+      "productname": "sugar",
+      "quantity": "1.5kg",
+      "price": "100"
     }
   ]
 }

@@ -25,7 +25,7 @@ export class WebService {
     return this.http.put(this.url1+emp.id,emp)
   }
 
-  addnew(emp:any){
+  addnewdata(emp:any){
     return this.http.post(this.url1,emp)
   }
 }

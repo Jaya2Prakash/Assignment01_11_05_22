@@ -2,17 +2,18 @@
     <thead>
         <tr>
           <th>ID</th>
-          <th>First-Name</th>
-          <th>Last-Name</th>
-          <th>Actions</th>
+          <th>ProductName</th>
+          <th>Quantity</th>
+          <th>Price</th>
         </tr>
       </thead>
 
     <tbody>
         <tr *ngFor="let user of users">
             <td>{{user.id}}</td>
-            <td>{{user.firstname}}</td>
-            <td>{{user.lastname}}</td>
+            <td>{{user.productname}}</td>
+            <td>{{user.quantity}}</td>
+            <td>{{user.price}}</td>
             <td>
                 <button type="button" class="btn btn-primary" (click)="edit(user)">Edit</button>
                 <button type="button" class="btn btn-danger" (click)="onDelete(user.id)">Delete</button>
@@ -24,15 +25,18 @@
 
 <div *ngIf="showedit">
     <div>
-        Id <input disabled type="text" [(ngModel)]='emptoadd.id'>
+      Product Id <input disabled type="text" [(ngModel)]='emptoadd.id'>
     </div>
     
     <div>
-        FirstName <input type="text" [(ngModel)]='emptoadd.firstname'>
+        ProductName <input type="text" [(ngModel)]='emptoadd.productname'>
     </div>
     
     <div>
-        LastName <input type="text" [(ngModel)]='emptoadd.lastname'>
+        Quantity <input type="text" [(ngModel)]='emptoadd.quantity'>
+    </div>    
+    <div>
+        Price <input type="text" [(ngModel)]='emptoadd.price'>
     </div>    
 
 
@@ -48,17 +52,20 @@
 
 <div *ngIf="showedit1">
     <div>
-        Id <input type="text" [(ngModel)]='emptoadd.id'>
+       Product Id <input type="text" [(ngModel)]='emptoadd.id'>
     </div>
-    
+      
     <div>
-        FirstName <input type="text" [(ngModel)]='emptoadd.firstname'>
+        ProductName <input type="text" [(ngModel)]='emptoadd.productname'>
     </div>
-    
+      
     <div>
-        LastName <input type="text" [(ngModel)]='emptoadd.lastname'>
+        Quantity <input type="text" [(ngModel)]='emptoadd.quantity'>
     </div>    
-
+    
+    <div>
+        Price <input type="text" [(ngModel)]='emptoadd.price'>
+    </div>    
 
     <div>
         <button (click)="add()">Add</button>
